@@ -1,0 +1,18 @@
+{% extends 'AppEntrega/base.html' %}
+
+{% load static %}
+
+{% block titulo %} 
+    Formulario
+{% endblock titulo %}
+
+{% block main %}
+<h1>Fichar un Jugador</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p> Nombre y Apellido: <input type="text" name="curso"></p>
+    <p> Numero de categoria: <input type="text" name="camada"></p>
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock main %}
