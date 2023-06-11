@@ -6,5 +6,5 @@ urlpatterns = [
     path('formulario/', views.formulario, name="Formulario"),
     path('form_api/', views.jugador_formulario, name="Form-api"),
     path('form_entrenador/', views.entrenador_Formulario, name="Form-entrenador"),
-    path('form_socio/', views.socio_formulario, name="Form-socio")
+    path('form_socio/', views.socio_formulario, name="Form-socio"),
 ]

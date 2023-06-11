@@ -13,4 +13,4 @@ class socioFormulario(forms.Form):
     nombre = forms.CharField()
     email = forms.EmailField()
     dni = forms.IntegerField()
-    numero_socio = forms.IntegerField()
+    num_socio = forms.IntegerField()

@@ -43,15 +43,28 @@ def entrenador_Formulario(request):
         miFormulario = entrenadorFormulario()
     return render(request,"AppEntrega/form_entrenador.html",{"miFormulario":miFormulario})
 
+# def socio_formulario(request):
+#     if request.method == 'POST':
+#         miFormulario = socioFormulario(request.POST)
+#         print(miFormulario)
+#         if miFormulario.is_valid():
+#             informacion = miFormulario.cleaned_data
+#             socio = Socio(nombre=informacion['nombre'],email=informacion['email'],dni=informacion['dni'],num_socio=informacion['num_socio'])
+#             socio.save()
+#             return render(request,"AppEntrega/index.html")
+#         else:
+#             miFormulario = socioFormulario()
+#         return render(request,"AppEntrega/form_socio.html",{"miFormulario":miFormulario})
+
 def socio_formulario(request):
     if request.method == 'POST':
         miFormulario = socioFormulario(request.POST)
         print(miFormulario)
         if miFormulario.is_valid():
             informacion = miFormulario.cleaned_data
-            socio = Socio(nombre=informacion['nombre'],email=informacion['email'],dni=informacion['dni'],num_socio=informacion['num_socio'])
-            socio.save()
+            sociof = Socio(nombre=informacion['nombre'],email=informacion['email'],dni=informacion['dni'],num_socio=informacion['num_socio'])
+            sociof.save()
             return render(request,"AppEntrega/index.html")
-        else:
-            miFormulario = socioFormulario()
-        return render(request,"AppEntrega/form_socio.html",{"miFormulario":miFormulario})
+    else:
+        miFormulario = socioFormulario()
+    return render(request,"AppEntrega/form_socio.html",{"miFormulario":miFormulario})
