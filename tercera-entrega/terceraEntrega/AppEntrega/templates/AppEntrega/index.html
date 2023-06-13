@@ -1,22 +1,17 @@
 {% extends 'AppEntrega/base.html' %}
-
 {% load static %}
-
 {% block titulo %}
 
 {% endblock titulo %}
-
 {% block main %}
-    <section>
-        <h1> Barra nav</h1>
-    </section>
-    <section>
-        <h1> Img 1 y texto 1</h1>
-    </section>
-    <section>
-        <h1> Img 2 y texto 2</h1>
-    </section>
-    <section>
-        <h1> Img 3 y texto 3</h1>
-    </section>
+                        <h1 class="mx-auto my-0 text-uppercase" style="
+                            text-align: center;
+                        ">Voley Centro Basko</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Esta es una pagina donde podras registrar y buscar jugadores, socios y entrenadores</h2>
+                        <a class="btn btn-primary" href="{% url 'Formulario' %}">Ingresar jugador</a>
+                        <a class="btn btn-primary" href="{% url 'Form-socio' %}">Ingresar socio</a>
+                        <a class="btn btn-primary" href="{% url 'Form-entrenador' %}">Ingresar entrenador</a>
+                    </div>
+                </div>
+            </div>
 {% endblock main %}

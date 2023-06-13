@@ -1,0 +1,15 @@
+{% extends 'AppEntrega/base.html' %}
+{% load static %}
+{% block titulo %}
+    Buscar Socio
+{% endblock titulo %}
+{% block main %}
+    <h1 style="text-align: center;">Entrenadores</h1>
+{% for entrenador in nombres %}
+    <section style=" text-align: center;">
+        <p style="color: aliceblue;"> -------------- </p>
+        <p style="color: aliceblue;"> Entrenador: {{ entrenador.nombre }}</p>
+        <p style="color: aliceblue;"> Email: {{ entrenador.email }}</p>
+    </section>
+{% endfor %}
+{% endblock main %}

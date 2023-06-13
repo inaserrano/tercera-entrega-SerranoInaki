@@ -14,3 +14,12 @@ class socioFormulario(forms.Form):
     email = forms.EmailField()
     dni = forms.IntegerField()
     num_socio = forms.IntegerField()
+    
+class BuscaJugador(forms.Form):
+    nombre = forms.CharField()
+
+class BuscaSocioForm(forms.Form):
+    nombre = forms.CharField()
+
+class BuscaEntrenadorForm(forms.Form):
+    nombre = forms.CharField()

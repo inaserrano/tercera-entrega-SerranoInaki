@@ -1,18 +1,22 @@
 {% extends 'AppEntrega/base.html' %}
-
 {% load static %}
-
 {% block titulo %} 
-    Formulario
+    Formulario Jugadores
 {% endblock titulo %}
-
 {% block main %}
-<h1>Fichar un Jugador</h1>
-<form action="" method="POST">
+<h1 style="
+    height: 110px;
+    text-align: center;
+">Fichar un Jugador</h1>
+<form action="" method="POST" style="
+    background-color: rgb(7, 7, 7);
+    display: flex;
+    color: aliceblue;
+    text-align: center;
+">
     {% csrf_token %}
     <p> Nombre y Apellido: <input type="text" name="curso"></p>
     <p> Numero de categoria: <input type="text" name="camada"></p>
-    <input type="submit" value="Enviar">
+    <input type="submit" value="Enviar" href="">
 </form>
-
 {% endblock main %}

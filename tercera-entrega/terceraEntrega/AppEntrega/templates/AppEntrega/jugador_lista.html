@@ -1,0 +1,15 @@
+{% extends 'AppEntrega/base.html' %}
+{% load static %}
+{% block titulo %}
+    Buscar Jugador
+{% endblock titulo %}
+{% block main %}
+    <h1 style="text-align: center;">Jugadores</h1>
+{% for curso in nombres %}
+    <section style=" text-align: center;">
+        <p style="color: aliceblue;"> -------------- </p>
+        <p style="color: aliceblue;"> Jugador: {{ curso.nombre }}</p>
+        <p style="color: aliceblue;"> Categoria: {{ curso.camada }}</p>
+    </section>
+{% endfor %}
+{% endblock main %}
